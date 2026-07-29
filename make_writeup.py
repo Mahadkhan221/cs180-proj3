@@ -50,9 +50,13 @@ def build():
     H12 = computeH(np.array(p["pts_i"]), np.array(p["pts_j"]))
     H12 = H12 / H12[2, 2]
 
-    css = """
-    :root{--bg:#0f1216;--card:#171b21;--ink:#e8ebef;--mut:#9aa4b2;--acc:#5db0ff;--line:#262c34}
-    @media (prefers-color-scheme:light){:root{--bg:#f6f7f9;--card:#fff;--ink:#141821;--mut:#5b6472;--acc:#1b6fd6;--line:#e3e7ec}}
+    light = "--bg:#f6f7f9;--card:#fff;--ink:#141821;--mut:#5b6472;--acc:#1b6fd6;--line:#e3e7ec"
+    dark = "--bg:#0f1216;--card:#171b21;--ink:#e8ebef;--mut:#9aa4b2;--acc:#5db0ff;--line:#262c34"
+    theme = (":root{" + light + "}"
+             "@media (prefers-color-scheme:dark){:root{" + dark + "}}"
+             ':root[data-theme="light"]{' + light + "}"
+             ':root[data-theme="dark"]{' + dark + "}")
+    css = theme + """
     *{box-sizing:border-box}
     body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.65 -apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif}
     .wrap{max-width:1080px;margin:0 auto;padding:0 22px 90px}

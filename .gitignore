@@ -5,3 +5,6 @@ __pycache__/
 *.secret
 # large raw photo originals (keep processed results tracked)
 data/raw/
+# derived self-contained writeups (multi-MB base64); rebuild with embed_writeup.py
+writeup_embedded.html
+writeup_artifact.html
