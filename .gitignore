@@ -1,0 +1,7 @@
+.venv/
+__pycache__/
+*.pyc
+.env
+*.secret
+# large raw photo originals (keep processed results tracked)
+data/raw/
