@@ -1,0 +1,31 @@
+{
+  "chateau": {
+    "manual_H12_err_vs_truth": 0.4335163402169542,
+    "n_manual_points": 12,
+    "auto_H12_err_vs_truth": 0.5489989303247853,
+    "n_matches": 222,
+    "n_inliers": 207,
+    "n_raw_corners": 6164
+  },
+  "mountains": {
+    "manual_H12_err_vs_truth": 0.1631464494375905,
+    "n_manual_points": 12,
+    "auto_H12_err_vs_truth": 0.1403524231934199,
+    "n_matches": 182,
+    "n_inliers": 182,
+    "n_raw_corners": 7206
+  },
+  "forest": {
+    "manual_H12_err_vs_truth": 0.15654214083912166,
+    "n_manual_points": 12,
+    "auto_H12_err_vs_truth": 0.041684169145003835,
+    "n_matches": 209,
+    "n_inliers": 209,
+    "n_raw_corners": 7968
+  },
+  "warp": {
+    "nn_ms": 115.1,
+    "bilinear_ms": 264.0
+  },
+  "_runtime_s": 48.2
+}
