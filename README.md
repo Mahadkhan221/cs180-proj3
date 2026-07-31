@@ -37,11 +37,11 @@ python test_warp.py               # identity, translation, bilinear-exact-on-ram
 correspondence and solves the over-determined system by least squares
 (`np.linalg.lstsq`). Recovers a known H from synthetic points to ~1e-8.
 
-**A.3 Warping + rectification** — inverse warping with nearest-neighbour and
+**A.3 Warping + rectification**  inverse warping with nearest-neighbour and
 bilinear samplers (`warp.py`). Rectification declares a plane's four corners to
 be a rectangle and warps it fronto-parallel (a laptop screen, a Bruges facade).
 
-**A.4 Mosaics** — warp all views into a shared canvas and feather-blend
+**A.4 Mosaics**  warp all views into a shared canvas and feather-blend
 (weights ramp to zero at each photo's edge). Three manual panoramas, each shown
 against the naive last-writer-wins composite so the seam removal is visible.
 
