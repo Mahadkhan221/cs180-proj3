@@ -2,11 +2,11 @@
 
 CS 180 Project 3. Recover the full **projective** relationship between
 overlapping photos, warp them into a common frame, and blend them into one
-seamless panorama — first from hand-clicked points, then fully automatically
+seamless panorama  first from hand-clicked points, then fully automatically
 with Harris corners, MOPS descriptors and RANSAC. Follow-up to Project 1, which
 aligned images by translation only.
 
-**[→ Read the writeup](writeup.html)** — every result with its explanation.
+**[→ Read the writeup](writeup.html)**  every result with its explanation.
 (Open the file locally; GitHub won't render HTML in-page.)
 
 ![Chateau panorama](results/chateau_auto.jpg)
@@ -33,7 +33,7 @@ python test_warp.py               # identity, translation, bilinear-exact-on-ram
 
 ## What each part does
 
-**A.2 Homographies** — `computeH` sets up two linear equations per
+**A.2 Homographies**  `computeH` sets up two linear equations per
 correspondence and solves the over-determined system by least squares
 (`np.linalg.lstsq`). Recovers a known H from synthetic points to ~1e-8.
 
@@ -48,10 +48,10 @@ against the naive last-writer-wins composite so the seam removal is visible.
 **B.1 Harris + ANMS** — `harris.py` (provided) finds thousands of corners;
 Adaptive Non-Maximal Suppression keeps 500 that are strong *and* spread out.
 
-**B.2/B.3 Descriptors + matching** — 40×40 windows sampled to normalised 8×8
+**B.2/B.3 Descriptors + matching**  40×40 windows sampled to normalised 8×8
 patches, matched by nearest neighbour with Lowe's ratio test.
 
-**B.4 RANSAC** — 4-point RANSAC fits a robust homography, then auto-stitches
+**B.4 RANSAC**  4-point RANSAC fits a robust homography, then auto-stitches
 using the exact same warp/blend as Part A. Auto mosaics are shown side by side
 with the manual ones.
 
@@ -59,7 +59,7 @@ with the manual ones.
 
 There is no hand-shot dataset here. Each set is synthesised from **one wide real
 photograph** (Unsplash imagery via picsum.photos) by re-projecting overlapping
-sub-windows through *known* homographies — the image-formation model of a camera
+sub-windows through *known* homographies  the image-formation model of a camera
 pivoting in place. This gives real texture, guaranteed overlap, no black
 borders, and an **exact ground-truth H**, so the recovered homographies are
 checked against truth in `results/summary.json` (they land sub-pixel). The two
